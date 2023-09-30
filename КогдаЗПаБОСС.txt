@@ -1,0 +1,49 @@
+CREATE TABLE "user"
+(
+    user_id smallserial,
+    first_name character varying(100) NOT NULL,
+    last_name character varying(100) NOT NULL,
+    email character varying(100),
+    balance bigint NOT NULL DEFAULT 0,
+    phone character varying(15) NOT NULL,
+    adress_id smallserial,
+    PRIMARY KEY (user_id, adress_id)
+);
+
+CREATE TABLE "product"
+(
+	product_id smallserial,
+	product_name character varying(100) NOT NULL,
+	product_price bigint NOT NULL,
+	description_id smallserial,
+	PRIMARY KEY (product_id, description_id)
+);
+
+CREATE TABLE "description"
+(
+	description_id smallserial,
+	description_file 
+	description_photo 
+    PRIMARY KEY (description_id)
+);
+
+CREATE TABLE "description"
+(
+	description_id smallserial,
+	description_file ?,
+	description_photo ?,
+    PRIMARY KEY (description_id)
+);
+
+CREATE TABLE "adress"
+(	
+	adress_id smallserial,
+	country character varying(100) NOT NULL,
+	city character varying(100) NOT NULL,	
+	street character varying(100) NOT NULL,
+	house character varying(100) NOT NULL,
+    PRIMARY KEY (adress_id)
+);
+
+SELECT *
+FROM "user" #Показать всё из таблицы ... 
