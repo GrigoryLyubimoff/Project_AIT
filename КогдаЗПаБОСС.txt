@@ -1,13 +1,13 @@
 CREATE TABLE "user"
 (
-    user_id smallserial,
-    first_name character varying(100) NOT NULL,
-    last_name character varying(100) NOT NULL,
-    email character varying(100),
-    balance bigint NOT NULL DEFAULT 0,
-    phone character varying(15) NOT NULL,
-    adress_id smallserial,
-    PRIMARY KEY (user_id, adress_id)
+    	user_id smallserial,
+    	first_name character varying(100) NOT NULL,
+    	last_name character varying(100) NOT NULL,
+    	email character varying(100),
+    	balance bigint NOT NULL DEFAULT 0,
+    	phone character varying(15) NOT NULL,
+    	adress_id smallserial,
+    	PRIMARY KEY (user_id, adress_id)
 );
 
 CREATE TABLE "product"
@@ -19,20 +19,16 @@ CREATE TABLE "product"
 	PRIMARY KEY (product_id, description_id)
 );
 
-CREATE TABLE "description"
-(
-	description_id smallserial,
-	description_file 
-	description_photo 
-    PRIMARY KEY (description_id)
-);
 
 CREATE TABLE "description"
 (
-	description_id smallserial,
-	description_file ?,
-	description_photo ?,
-    PRIMARY KEY (description_id)
+
+    	description_id smallserial,
+    	description_pfoto_file bytea,
+    	description_pfoto_expansion character varying(10) NOT NULL,
+		description_text character varying(1000) DEFAULT 'Нет информации о товаре',
+    	PRIMARY KEY (description_id)
+    
 );
 
 CREATE TABLE "adress"
@@ -47,3 +43,9 @@ CREATE TABLE "adress"
 
 SELECT *
 FROM "user" #Показать всё из таблицы ... 
+
+
+
+
+
+
