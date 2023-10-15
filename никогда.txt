@@ -43,5 +43,4 @@ CREATE TABLE "adress"
 		FOREIGN KEY (adress_id) REFERENCES "user" (adress_id)
 );
 
-Сдедать автоматическое обновление таблиц. Поставить доп ограничения. Изменить seller, sellar_id
 
