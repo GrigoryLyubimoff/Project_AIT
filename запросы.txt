@@ -1,0 +1,31 @@
+select first_name, last_name, balance 
+from "user" where balance > 0 order by balance desc;
+
+
+select product_name, product_price
+from product order by product_price desc;
+
+
+select first_name, last_name, email 
+from "user" where email like '%@gmail%';
+
+
+select city, count(*) as city_count
+from adress
+group by city;
+
+
+select product_name, product_price
+from product where product_price<50000 and product_price>1500;
+
+
+select first_name, last_name, buyer_id
+from "user" left join product on product.buyer_id = "user".user_id
+where product.buyer_id is not null;
+
+
+select first_name, last_name, phone
+from "user" where phone like '+ 7%';
+
+select first_name, last_name, country, city, street, house
+from "user" left join adress on "user".adress_id = adress.adress_id
